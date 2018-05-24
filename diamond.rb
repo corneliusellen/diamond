@@ -16,4 +16,10 @@ class Diamond
       end
     end
   end
+
+  def self.make_diamond(letter)
+    top_half = make_half(letter)
+    bottom_half = make_half(letter).reverse
+    top_half.shift(top_half.length - 1) + bottom_half
+  end
 end
