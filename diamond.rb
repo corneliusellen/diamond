@@ -22,4 +22,8 @@ class Diamond
     bottom_half = make_half(letter).reverse
     top_half.shift(top_half.length - 1) + bottom_half
   end
+
+  def self.print_diamond(letter)
+    make_diamond(letter).join
+  end
 end
