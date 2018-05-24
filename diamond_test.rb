@@ -12,4 +12,10 @@ class DiamondTest < Minitest::Test
 
     assert_equal(diamond, ["     a\n", "    b b\n", "   c   c\n", "  d     d\n", " e       e\n", "  d     d\n", "   c   c\n", "    b b\n", "     a\n"])
   end
+
+  def test_it_prints_diamond
+    diamond = Diamond.print_diamond('e')
+
+    assert_equal(diamond, "     a\n    b b\n   c   c\n  d     d\n e       e\n  d     d\n   c   c\n    b b\n     a\n")
+  end
 end
