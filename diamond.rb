@@ -8,11 +8,11 @@ class Diamond
   def self.make_half(letter)
     alphabet = make_alphabet(letter)
     max_spaces = alphabet.count
-    alphabet.map.with_index do |letter, i|
+    alphabet.map.with_index do |char, i|
       if i == 0
-        " " * (max_spaces - i) + letter + "\n"
+        " " * max_spaces + char + "\n"
       else
-        " " * (max_spaces - i) + letter + " " * (i + i-1) + letter + "\n"
+        " " * (max_spaces - i) + char + " " * (i + i-1) + char + "\n"
       end
     end
   end
